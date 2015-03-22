@@ -8,7 +8,10 @@ namespace MvcApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        
         public List<string> strList = new List<string>();
+        
+
         public void InitMess()
         {
             strList.Add("Modify this template to jump-start your ASP.NET MVC application.");
@@ -28,7 +31,7 @@ namespace MvcApplication1.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = getMessages(0);
-
+            ViewBag.CurrentDate = DateTime.Now;
             return View();
         }
 
